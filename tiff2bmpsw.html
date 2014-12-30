@@ -16,7 +16,22 @@ function register() {
 }
 </script>
 <h1>Load TIFF image using ServiceWorker and emscripten</h1>
-<input type="button" onclick="register()" value="Please click">
+<div>
+Source: <a href="https://github.com/horo-t/tiff2bmpsw">https://github.com/horo-t/tiff2bmpsw</a><br>
 <br>
-<img src="cherry_blossom.tif">
+This page is a demo of ServiceWorker.<br>
+<br>
+Chrome can't load TIFF images.<br>
+But you can see the image below after clicking the button.<br>
+This button registers a <a href="https://slightlyoff.github.io/ServiceWorker/spec/service_worker/">ServiceWorker</a> which converts TIFF file to BMP file.<br>
+This ServiceWorker is using <a href="http://www.remotesensing.org/libtiff/">LibTIFF</a> library which is compiled to JavaScript by <a href="https://github.com/kripken/emscripten">Emscripten</a>.<br>
+You can inspect the ServiceWorker from <b>chrome://inspect/#service-workers</b>.<br>
+<br>
+If you are using Chrome 39, you have to enable "enable-experimental-web-platform-features" in chrome://flags.<br>
+<br>
+</div>
+<div>
+<img src="cherry_blossom.tif"></br>
+<input type="button" onclick="register()" value="Please click">
+</div>
 </body>

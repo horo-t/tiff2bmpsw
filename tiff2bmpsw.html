@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<body>
+<script>
+function register() {
+  navigator.serviceWorker.register("./tiff2bmpsw.js",
+                                   {scope: "./"})
+    .then(function(e) {
+        alert("ServiceWorker registration succeeded.");
+        location.reload();
+      })
+    .catch(function(e) {
+        alert("ServiceWorker registration error.");
+        console.log(e);
+      });
+}
+</script>
+<input type="button" onclick="register()" value="Please click">
+<br>
+<img src="lena512color.tiff">
+</body>

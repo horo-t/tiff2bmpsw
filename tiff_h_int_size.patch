@@ -1,0 +1,38 @@
+--- libtiff/tiff.h	2012-08-20 01:56:35.000000000 +0900
++++ libtiff_new/tiff.h	2014-12-29 22:21:57.000000000 +0900
+@@ -28,6 +28,7 @@
+ #define	_TIFF_
+ 
+ #include "tiffconf.h"
++#include <stdint.h>
+ 
+ /*
+  * Tag Image File Format (TIFF)
+@@ -65,17 +66,17 @@
+  * strings              unsigned char*
+  */
+ 
+-typedef TIFF_INT8_T   int8;
+-typedef TIFF_UINT8_T  uint8;
++typedef int8_t   int8;
++typedef uint8_t  uint8;
+ 
+-typedef TIFF_INT16_T  int16;
+-typedef TIFF_UINT16_T uint16;
+-
+-typedef TIFF_INT32_T  int32;
+-typedef TIFF_UINT32_T uint32;
+-
+-typedef TIFF_INT64_T  int64;
+-typedef TIFF_UINT64_T uint64;
++typedef int16_t  int16;
++typedef uint16_t uint16;
++  
++typedef int32_t  int32;
++typedef uint32_t uint32;
++  
++typedef int64_t  int64;
++typedef uint64_t uint64;
+ 
+ /*
+  * Some types as promoted in a variable argument list
